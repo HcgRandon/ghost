@@ -16,7 +16,8 @@ ADD config.example.js /app/
 
 ENV GHOST_URL http://my-ghost-blog.com
 
+WORKDIR /app
 EXPOSE 2368
-VOLUME ["/app/content"]
+VOLUME ["/app/content/data"]
 
-CMD ["node", "/app/index.js"]
+CMD ["node", "index.js"]
